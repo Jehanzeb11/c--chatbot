@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cctype>  // For tolower function
 using namespace std;
 
 int main() {
@@ -19,8 +20,8 @@ int main() {
         getline(cin, userInput);
 
         // Convert input to lowercase for case-insensitive matching
-        for (char &c : userInput) {
-            c = tolower(c);
+        for (int i = 0; i < userInput.length(); ++i) {
+            userInput[i] = tolower(userInput[i]);
         }
 
         if (userInput == "exit") {
